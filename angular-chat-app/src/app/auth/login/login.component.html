@@ -1,0 +1,30 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-title>Login</mat-card-title>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Enter your username" formControlName="username">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password" formControlName="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" type="button">
+          <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+      </mat-form-field>
+      <div class="button-row">
+        <button mat-stroked-button color="warn" (click)="onClear()">Clear</button>
+        <button mat-raised-button color="primary" class="full-width-only" [disabled]="loading || loginForm.invalid">
+          <mat-progress-spinner *ngIf="loading" diameter="20" mode="indeterminate" color="accent" class="spinner-button"></mat-progress-spinner>
+          <span *ngIf="!loading">Login</span>
+        </button>
+      </div>
+    </form>
+    <div class="signup-link">
+      <span>Don't have an account?</span>
+      <a routerLink="/signup">Sign up</a>
+    </div>
+  </mat-card>
+</div>

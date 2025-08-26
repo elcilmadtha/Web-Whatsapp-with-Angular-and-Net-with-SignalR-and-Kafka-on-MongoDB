@@ -1,0 +1,27 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/chat/v17
+/.vs/chat/CopilotIndices/17.14.734.62261
+/chat.api/bin/Debug/net8.0
+/chat.api/obj
+/chat.data/bin/Debug/net8.0
+/chat.data/obj
+/chat.messgae/bin/Debug/net8.0
+/chat.messgae/obj
+/chat.migrations/bin/Debug/net8.0
+/chat.migrations/obj
+/.vs/chat
+/.vs/chat-api/CopilotIndices/17.14.734.62261
+/.vs/chat-api/v17
+/.vs/ProjectEvaluation
+/.vs
+/chat.message/bin/Debug/net8.0
+/chat.message/obj
+/Chat.Shared/obj
+/Chat.Shared/bin/Debug/net8.0
+/tempname/bin/Debug/net8.0
+/tempname/obj/Debug/net8.0
+/tempname/obj/Release/net8.0
+/tempname/obj

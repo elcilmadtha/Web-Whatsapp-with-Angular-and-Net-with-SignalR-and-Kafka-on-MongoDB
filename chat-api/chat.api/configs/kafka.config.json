@@ -1,0 +1,17 @@
+{
+  "kafka": {
+    "Bootstrap_Kafka_Local": "34.14.221.164:9093",
+    "Bootstrap_Kafka_Server": "kafka-service:9092",
+    "Topics": {
+      "PublishMessagestoEntityCommand": { "topic": "topic_messages_to_db" }
+    },
+    "Consumers": {
+      "PublishMessagestoEntityCommand": {
+        "consumer": "consumer_chat_save",
+        "groupid": "chat-save-group",
+        "topic": [ "topic_messages_to_db" ]
+      }
+    }
+  }
+}
+
