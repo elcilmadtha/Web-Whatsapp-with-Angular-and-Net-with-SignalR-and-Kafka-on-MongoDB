@@ -43,5 +43,5 @@ CI/CD: GitLab CI
 
 <img src="https://github.com/elcilmadtha/Web-Whatsapp-with-Angular-and-Net-with-SignalR-and-Kafka-on-MongoDB/blob/main/artifacts.png" alt="Artifact Repository" width="600"/>
 <img src="https://github.com/elcilmadtha/Web-Whatsapp-with-Angular-and-Net-with-SignalR-and-Kafka-on-MongoDB/blob/main/kafka-ui.png" alt="Artifact Repository" width="600"/>
-<img src="[https://github.com/elcilmadtha/Web-Whatsapp-with-Angular-and-Net-with-SignalR-and-Kafka-on-MongoDB/blob/main/kafka-ui.png](https://github.com/elcilmadtha/Web-Whatsapp-with-Angular-and-Net-with-SignalR-and-Kafka-on-MongoDB/blob/main/workloads.png)" alt="Artifact Repository" width="600"/>
+<img src="https://github.com/elcilmadtha/Web-Whatsapp-with-Angular-and-Net-with-SignalR-and-Kafka-on-MongoDB/blob/main/workloads.png" alt="Artifact Repository" width="600"/>
 #Angular #DotNetCore #SignalR #Kafka #Kubernetes #Docker #Terraform #FullStackDevelopment #RealTimeChat
