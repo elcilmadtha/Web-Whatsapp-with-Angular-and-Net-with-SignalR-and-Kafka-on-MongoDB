@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/angular-chat-app
+/.vs
+/angular-chat-app/.vscode
+/.angular/cache/16.2.16
+/.vscode
+/dist/angular-chat-app
+/node_modules

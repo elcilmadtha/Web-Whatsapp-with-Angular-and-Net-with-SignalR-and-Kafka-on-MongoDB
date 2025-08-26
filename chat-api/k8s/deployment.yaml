@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: chat-api-deployment
+  labels:
+    app: chat-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: chat-api
+  template:
+    metadata:
+      labels:
+        app: chat-api
+    spec:
+      containers:
+      - name: chat-api-container
+        image: asia-south1-docker.pkg.dev/ascendant-hub-197910/chat-app/chat-api:CHAT_API_IMAGE_TAG
+        ports:
+        - containerPort: 80
+        env:
+        - name: ASPNETCORE_URLS
+          value: "http://0.0.0.0:80"

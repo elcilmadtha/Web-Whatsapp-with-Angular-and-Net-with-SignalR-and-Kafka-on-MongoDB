@@ -1,0 +1,39 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: taaindia-ingress
+  annotations:
+    kubernetes.io/ingress.class: "gce" 
+    # cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    ingress.gcp.kubernetes.io/enable-websocket: "true"
+    ingress.gcp.kubernetes.io/backend-protocol: "HTTP"
+    ingress.gcp.kubernetes.io/session-affinity: "CLIENT_IP"
+    ingress.gcp.kubernetes.io/session-affinity-cookie-ttl: "3600"
+    cloud.google.com/backend-config: '{"default": "websocket-config-for-ingress"}'
+spec:
+  rules:
+  - host: chat.taaindia.in
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: angular-chat-app-service
+            port:
+              number: 80
+  - host: api.taaindia.in
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: chat-api-service
+            port:
+              number: 80
+  tls:
+    - hosts:
+        - chat.taaindia.in
+        - api.taaindia.in
+      secretName: taaindia-tls

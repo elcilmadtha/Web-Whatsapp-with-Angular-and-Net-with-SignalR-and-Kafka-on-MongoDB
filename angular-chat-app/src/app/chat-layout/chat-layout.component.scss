@@ -1,0 +1,81 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
+
+.example-is-mobile .mat-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.example-app-name, h3.example-app-name {
+  margin-left: 8px;
+  margin-left: 8px;
+  margin-right: 10px;
+}
+
+.example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+}
+
+
+
+/* In component.scss or global styles */
+.flex-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row; // horizontal
+}
+
+.flex-sidenav {
+  flex: 0 0 25%; // like col-3 (adjust as needed)
+  min-width: 300px; // prevent collapse
+  max-width: 400px; // optional cap
+  background: #f5f5f5;
+}
+
+.flex-content {
+  flex: 1; // take remaining space
+  padding: 16px;
+  overflow: auto;
+  height: 100%;
+}
+.chat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+.logout-border-options
+{
+  border: none;
+  box-shadow: none;
+  background: none;
+  padding: 0px 10px;
+}
+mat-toolbar button {
+  border: 0px;
+}

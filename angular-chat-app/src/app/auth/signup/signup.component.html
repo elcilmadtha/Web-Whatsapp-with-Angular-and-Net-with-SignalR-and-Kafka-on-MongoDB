@@ -1,0 +1,56 @@
+<div class="signup-container">
+  <mat-card class="signup-card">
+    <mat-card-title>Sign Up</mat-card-title>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter your name" formControlName="name">
+        <mat-error *ngIf="signupForm.get('name')?.hasError('required')">
+          Name is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Enter your email" formControlName="email">
+        <mat-error *ngIf="signupForm.get('email')?.hasError('required')">
+          Email is required
+        </mat-error>
+        <mat-error *ngIf="signupForm.get('email')?.hasError('email')">
+          Please enter a valid email
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Enter your username" formControlName="username">
+        <mat-error *ngIf="signupForm.get('username')?.hasError('required')">
+          Username is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password" formControlName="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" type="button">
+          <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+        <mat-error *ngIf="signupForm.get('password')?.hasError('required')">
+          Password is required
+        </mat-error>
+      </mat-form-field>
+      <div class="button-row">
+        <button mat-stroked-button color="warn" (click)="onClear()">Clear</button>
+        <button mat-raised-button color="primary" class="full-width-only" [disabled]="signupForm.invalid">
+          Sign Up
+        </button>
+      </div>
+    </form>
+
+    <div class="login-link">
+      <span>Already have an account? </span>
+      <a routerLink="/login" style="cursor: pointer;">Login</a>
+    </div>
+  </mat-card>
+</div>

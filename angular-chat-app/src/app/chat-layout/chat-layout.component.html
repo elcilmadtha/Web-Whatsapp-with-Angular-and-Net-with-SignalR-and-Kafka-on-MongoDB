@@ -1,0 +1,20 @@
+<div class="example-container" [class.example-is-mobile]="isMobile()">
+  <mat-toolbar class="mat-toolbar">
+    <button matIconButton (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <h1 class="example-app-name"></h1>
+    <span class="spacer"></span>
+    <h3 class="example-app-name">{{currentUserName | capitalize}}</h3>
+    <button mat-icon-button matTooltip="Logout" (click)="logout()" aria-label="Logout" class="logout-border-options">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+
+    <mat-sidenav-container class="flex-container" [style.marginTop.px]="isMobile() ? 56 : 0">
+      <mat-sidenav #snav [mode]="isMobile() ? 'over' : 'side'" [opened]="!isMobile()" [fixedInViewport]="isMobile()" fixedTopGap="56" class="flex-sidenav">
+        <app-user-list (selectedUser)="selectedUser($event)"></app-user-list>
+      </mat-sidenav>
+      <mat-sidenav-content class="flex-content">
+        <app-chat-window [selectedUserDto]="selectedUserDto"></app-chat-window>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
