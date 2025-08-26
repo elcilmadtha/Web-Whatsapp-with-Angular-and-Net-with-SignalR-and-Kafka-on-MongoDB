@@ -1,4 +1,4 @@
-# Web Whatsapp with Angular and Net with SignalR and Kafka on MongoDB (Microservice Architecture with CI/CD Implemented)
+# Web Whatsapp with Angular and Net with SignalR and Kafka on MongoDB (Microservice Architecture with CI/CD Implementation)
 
 Click on the Image below to watch short video of how it works
 <a href="https://www.youtube.com/watch?v=_817yV6eOXU" target="_blank">
