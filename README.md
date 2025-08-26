@@ -30,14 +30,8 @@ Infrastructure as Code
 Manage Kafka topics and versioning via Terraform.
 
 ✅ Tech Stack
-
 Frontend: Angular (Latest)
 Backend: .NET Core (Latest)
-
-
-✅ Hashtags for visibility
-
-#Angular #DotNetCore #SignalR #Kafka #Kubernetes #Docker #Terraform #FullStackDevelopment #RealTimeChat
 Real-Time Communication: SignalR
 Message Broker: Apache Kafka
 Database: MongoDB
@@ -45,3 +39,6 @@ Containerization: Docker
 Orchestration: Kubernetes
 Infrastructure as Code: Terraform
 CI/CD: GitLab CI
+
+
+#Angular #DotNetCore #SignalR #Kafka #Kubernetes #Docker #Terraform #FullStackDevelopment #RealTimeChat
